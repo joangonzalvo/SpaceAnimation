@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>JGC Coet</title>
+        <meta name="description" content="Coet espacial">
+        <link rel="stylesheet" href="Estil/estil.css">
+        <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+         <script type="text/javascript" src="jquery/jquery-3.1.1.min.js"></script>
+        <script type="text/javascript" src="jquery/jquery-3.1.1.js"></script>
+    <script>
+    $("document").ready(function(){
+        $("#boton").click(function(){
+            $("#boton").css("display", "none");
+            $("#marcianito1").css("transition-duration","0s");
+            $("#marcianito1").css("height","200px");
+            $("#marcianito1").css("background-image","url(Imatges/explosion.gif)");
+            $("#marcianito2").css("transition-duration","0s");
+            $("#marcianito2").css("background-image","url(Imatges/explosion.gif)");
+            $("#sonidos").append("<audio id='explosound' src='Audio/explosound.mp3' autoplay>");
+            setTimeout(function(){
+              $("#marcianito1").css("display","none");
+              $("#marcianito2").css("display","none");
+                $("#asustado").css("display","none");
+            $("#feliz").css("display","inline");
+            }, 3000);
+            setTimeout(function(){
+              $("#fondo").css("background-image","none");
+              $("#feliz").css("display","none");
+              $("#espacio").remove();
+              $("#extran").css("display","inline");
+                $("#sonidos").append("<audio id='explosound' src='Audio/thriller.mp3' autoplay>");
+                $("#sonidos").append("<audio id='explosound' src='Audio/helleditat.wav' autoplay loop>");
+            }, 6000);
+            setTimeout(function(){
+              $("#fondo").css("background-color","red");
+              $("#extran").css("background-image","url(Imatges/preocupado.png)");
+            }, 15000);
+            setTimeout(function(){
+              $("#aparicion").css("display","inline");
+            }, 17000);
+            setTimeout(function(){
+              $("#aparicion").css("visibility","hidden");
+            }, 19000);
+            setTimeout(function(){
+              $("#aparicion").css("visibility","visible");
+              $("#aparicion").css("left","700px");
+              $("#aparicion").css("top","370px");
+            }, 21000);
+            setTimeout(function(){
+              $("#aparicion").css("visibility","hidden");
+            }, 23500);
+            setTimeout(function(){
+              $("#aparicion").css("visibility","visible");
+              $("#aparicion").css("left","650px");
+              $("#aparicion").css("top","70px");
+            }, 26000);
+            setTimeout(function(){
+              $("#aparicion").css("visibility","hidden");
+            }, 30000);
+            setTimeout(function(){
+              $("#aparicion").css("visibility","visible");
+              $("#aparicion").css("left","100px");
+              $("#aparicion").css("top","75px");
+            }, 33000);
+            setTimeout(function(){
+              $("#aparicion").css("visibility","hidden");
+            }, 36500);
+            setTimeout(function(){
+              $("#aparicion").css("visibility","visible");
+              $("#aparicion").css("left","20px");
+              $("#aparicion").css("top","200px");
+            }, 38000);
+            setTimeout(function(){
+              $("#aparicion").css("visibility","hidden");
+            }, 42000);
+            setTimeout(function(){
+              $("#aparicion").css("visibility","visible");
+              $("#aparicion").css("left","600px");
+              $("#aparicion").css("top","300px");
+            }, 44000);
+            setTimeout(function(){
+              $("#aparicion").css("visibility","hidden");
+            }, 46500);
+            setTimeout(function(){
+              $("#aparicion").css("visibility","visible");
+                $("#aparicion").css("left","600px");
+              $("#aparicion").css("top","30px");
+            }, 48000);
+            setTimeout(function(){
+              $("#aparicion").css("visibility","hidden");
+            }, 50000);
+            setTimeout(function(){
+              $("#aparicion").css("visibility","visible");
+                $("#aparicion").css("left","700px");
+              $("#aparicion").css("top","250px");
+                $("#aparicion").css("animation","asustado 2s infinite linear");
+            }, 52000);
+            setTimeout(function(){
+              $("#aparicion").css("display","none");
+            }, 57000);
+            setTimeout(function(){
+                $("#fondo").css("background-image","url(Imatges/fondo2.jpg)");
+                $("#fondo").css("animation","fondo 10s linear infinite;");
+                $("#extran").css("display","none");
+                $("#asustado").css("display","inline");
+                $("#hellboss").css("display","inline");
+                $("#asustado").css("animation","asustado .5s infinite linear");
+                $("#coet").css("animation","mover_coet_infierno 2s ease-in-out infinite");
+            }, 58500);
+            
+            
+
+        })
+    });
+    </script>
+    </head>
+    <body>
+    <audio id="espacio" src="Audio/space.mp3" autoplay loop>
+    </audio>
+    <div id="fondo">
+        <div id="coet">
+            <div id="asustado"></div>
+            <div id="feliz"></div>
+            <div id="extran"></div>
+        </div>
+        <div id="marcianito1"></div>
+        <div id="marcianito2"></div>
+        <div id="aparicion"></div>
+        <div id="hellboss"></div>
+        <div id="boton"></div>
+    </div>
+        <div id="sonidos"></div>
+    </body>
+</html>
